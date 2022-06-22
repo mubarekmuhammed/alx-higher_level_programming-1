@@ -3,7 +3,7 @@
 
 
 class Square:
-    """representing a square
+    """Represents a square.
     Private instance attribute: size:
         - property def size(self)
         - property setter def size(self, value)
@@ -16,9 +16,9 @@ class Square:
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initializes the object."""
-        self.__size = size
-        self.__position = position
+        """Initializes the data."""
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -28,7 +28,7 @@ class Square:
     @size.setter
     def size(self, value):
         """Sets the size to a value."""
-        if not type(value) is int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
