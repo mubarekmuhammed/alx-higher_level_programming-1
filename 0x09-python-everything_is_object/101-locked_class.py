@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""Locked class"""
+
+
 class LockedClass:
-
-    __slots__ = ['first_name']
-
-    def __init__(self, first_name=''):
-        self.first_name = first_name
+    """prevents user from dynamically creating new instance
+    attribute if new instance is not first_name"""
+    __slots__ = ["first_name"]
